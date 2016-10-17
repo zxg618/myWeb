@@ -2,20 +2,39 @@
 <html ng-app="myApp">
 <head>
     <title>Shawn's index page</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
-    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="scripts/app.js"></script>
+<link rel="stylesheet" href="style/main.css">
+
 <div ng-controller="mainController">
     <label>Name:</label>
-    <input type="text" data-ng-model="name" data-ng-change="validate()" placeholder="Enter a name here">
+    <input type="text" class="form-control" data-ng-model="name" data-ng-change="validate()" placeholder="Enter a name here">
+    <button type="button" class="btn btn-default">Clear</button>
     <hr>
     <h1>Hello {{name}}!</h1>
 </div>
 
 <div>
     <a href="/views/page1.html">Go to page 1</a>
+</div>
+
+<div ng-controller="DatePickerCtrl">
+    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+    <h4>Inline</h4>
+    <div style="display:inline-block; min-height:290px;">
+        <div ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+    </div>
+
+    <hr />
+    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" tooltip="After today restriction">Min date</button>
 </div>
 
 </body>

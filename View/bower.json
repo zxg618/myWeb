@@ -1,0 +1,21 @@
+{
+  "name": "myWeb",
+  "homepage": "https://github.com/zxg618/myWeb",
+  "authors": [
+    "zxg618 <zxg618@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.x",
+    "angular-bootstrap": "^2.2.0"
+  }
+}
