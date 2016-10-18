@@ -1,14 +1,22 @@
 <!doctype html>
 <html ng-app="myApp">
 <head>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+
     <title>Shawn's index page</title>
 </head>
 <body>
-
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-<script src="scripts/app.js"></script>
-<link rel="stylesheet" href="style/main.css">
 
 <div ng-controller="mainController">
     <label>Name:</label>
@@ -27,14 +35,14 @@
 
     <h4>Inline</h4>
     <div style="display:inline-block; min-height:290px;">
-        <div ng-model="dt" class="well well-sm" datepicker-options="options"></div>
+        <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
     </div>
 
     <hr />
     <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
     <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
     <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
-    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" tooltip="After today restriction">Min date</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
 </div>
 
 </body>
