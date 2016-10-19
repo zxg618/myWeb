@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ui.bootstrap']);
 
 myApp.controller('mainController', function($scope) {
     //global variable $scope?

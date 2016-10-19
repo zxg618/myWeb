@@ -1,15 +1,28 @@
 <!doctype html>
 <html ng-app="myApp">
 <head>
-    <title>Shawn's index page</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/page1.js"></script>
+
+    <title>Shawn's index page</title>
 </head>
 <body>
+
 <div ng-controller="mainController">
     <label>Name:</label>
-    <input type="text" data-ng-model="name" data-ng-change="validate()" placeholder="Enter a name here">
+    <input type="text" class="form-control" data-ng-model="name" data-ng-change="validate()" placeholder="Enter a name here">
+    <button type="button" class="btn btn-default">Clear</button>
     <hr>
     <h1>Hello {{name}}!</h1>
 </div>
