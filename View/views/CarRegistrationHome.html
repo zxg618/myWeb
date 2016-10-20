@@ -2,9 +2,53 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html ng-app="carRegApp">
 <head>
+    <link rel="stylesheet" href="../bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/CarRegistrationHome.js"></script>
     <title>Car Registration Homepage</title>
 </head>
-<body>
+<body ng-controller="mainController">
+
+<div>
+    <a href="SampleData.php">Sample Data</a>
+</div>
+
+<br>
+
+<div>
+    <table class="table-bordered">
+        <tr>
+            <td>
+                RID
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Registration
+            </td>
+        </tr>
+        <tr ng-repeat="record in jsonData">
+            <td>
+                {{record._rid}}
+            </td>
+            <td>
+                {{record.Driver.FirstName}} {{record.Driver.LastName}}
+            </td>
+            <td>
+                {{record.RegistrationNumber}}
+            </td>
+        </tr>
+    </table>
+</div>
 
 </body>
 </html>
